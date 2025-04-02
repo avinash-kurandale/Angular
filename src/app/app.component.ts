@@ -34,9 +34,15 @@ export class AppComponent {
   // making counter app in Angular , making button for increment decrement and reset 
 
   count=0
-
-  handleIncrement(){
-    this.count=this.count+1
-  }
   
+  handleCounter(val:string){
+    if(val=='minus'){
+      this.count=this.count-1
+    }else if(val=='plus'){
+      this.count=this.count+1
+    }else{
+      this.count=0
+    }
+
+  }
 }

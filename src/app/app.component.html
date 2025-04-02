@@ -11,10 +11,10 @@
  
  <div style="text-align: center;">
   <h1>Counter App</h1>
-      <h2 (click)=" handleIncrement" class="count">{{count}}</h2>
+      <h2 class="count">{{count}}</h2>
       <div>
-        <button class="btn bg-red">decrement</button>
-        <button class="btn bg-black">Reset</button>
-        <button class="btn bg-green">increment</button>
+        <button (click)="handleCounter('minus')"  class="btn bg-red">decrement</button>
+        <button (click)="handleCounter('reset')"  class="btn bg-black">Reset</button>
+        <button (click)="handleCounter('plus')" class="btn bg-green">increment</button>
       </div>
  </div>
