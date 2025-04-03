@@ -45,4 +45,27 @@ export class AppComponent {
     }
 
   }
+
+   // create function for click input mouse focus and blue events
+
+   handleEvent(event:Event){
+    console.log("function called",event.type);
+    console.log("value",(event.target as HTMLInputElement).value);
+   }
+
+  // <!--GET and Set Input field Value  -->
+
+  info=""
+  displayInfo=""
+  getInfo(event:Event){
+    this.info=(event.target as HTMLInputElement).value
+  }
+
+  showInfo(){
+    this.displayInfo = this.info;
+  }
+
+
 }
+
+  

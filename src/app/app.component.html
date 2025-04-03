@@ -1,20 +1,67 @@
 <h1>Function call on button click</h1>
 <button (click)="handleClickEvent()">Click Me</button>   <!-- here click is calling the function i.e handleClickEvent-->
 
-<!-- add fuction with assign data type and button -->
- <button (click)="sum(2,5)">Sum</button>
+<!-- add fuction with assign data type and button -->  
+
+
+              <button (click)="sum(2,5)">Sum</button>
 
  
 
  <!--making counter app in Angular , making button for increment decrement and reset  -->
 
  
- <div style="text-align: center; background-color: aqua;">
-  <h1>Counter App</h1>
-      <h2 class="count">{{count}}</h2>
-      <div>
-        <button (click)="handleCounter('minus')"  class="btn bg-red">decrement</button>
-        <button (click)="handleCounter('reset')"  class="btn bg-black">Reset</button>
-        <button (click)="handleCounter('plus')" class="btn bg-green">increment</button>
-      </div>
- </div>
+              <div style="text-align: center; background-color: aqua;">
+                <h1>Counter App</h1>
+                    <h2 class="count">{{count}}</h2>
+                    <div>
+                      <button (click)="handleCounter('minus')"  class="btn bg-red">decrement</button>
+                      <button (click)="handleCounter('reset')"  class="btn bg-black">Reset</button>
+                      <button (click)="handleCounter('plus')" class="btn bg-green">increment</button>
+                    </div>
+              </div>
+
+ <!-- click input mouse focus and blue events -->
+
+            <div style="background-color: chartreuse;">
+              <h1>Event in Angular</h1>
+              <h3>click input mouse focus and blue events</h3>
+
+        <!-- click Event -->
+              <button class="avinash" name="login" (click)="handleEvent($event)">Click Event</button>
+              
+        <!-- mouseenter event -->
+            <div
+            (mouseenter)="handleEvent($event)"
+            style="background-color: green; height: 100px; width: 100px;">
+            
+              
+            </div>
+        <!-- mouseleave event -->
+            <div
+            (mouseleave)="handleEvent($event)"
+            style="background-color: rgb(0, 0, 128); height: 100px; width: 100px;">
+            
+              
+            </div>
+
+        <!-- Input Event   -->
+          
+            <input type="text"
+            (input)="handleEvent($event)"
+            name="user">
+
+  </div>
+<!--GET and Set Input field Value  -->
+
+          <div style="background-color: aqua;">
+            <h1>GET and Set Input field Value</h1>
+            <h1>User Name is : {{displayInfo}}</h1>
+            <input type="text" (input)="getInfo($event)" placeholder="Enter User name">
+            <br>
+            <button (click)="showInfo()">Get Value</button>
+
+            
+
+          </div>
+
