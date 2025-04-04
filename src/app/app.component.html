@@ -84,3 +84,19 @@
   <!-- work is done in home components check it out -->
 
   <app-home></app-home>
+
+
+  <!-- IF ELSE in Angular | hide show | toggle  -->
+
+         <div class="if-else">
+              <button (click)="showBox()">Show-Box</button>
+              <button (click)="hideBox()">Hide-Box</button>
+
+              @if(isBoxVisible){
+                <div class="green-box">
+
+                </div>
+              }@else{
+                <P>box is hidden, click on show box to see box</P>
+              }
+         </div>

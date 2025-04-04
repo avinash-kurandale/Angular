@@ -83,6 +83,17 @@ export class AppComponent {
 //  style option in angular 
 // imports: [RouterOutlet,HomeComponent], here homecomponent is imported in ts file of appcomponent
 
+
+//if and else in angular | hide and show circle
+    isBoxVisible: boolean = true;
+
+    showBox(){
+      this.isBoxVisible=true;
+    }
+
+    hideBox(){
+      this.isBoxVisible=false;
+    }
 }
 
   
