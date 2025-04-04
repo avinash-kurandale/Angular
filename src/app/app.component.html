@@ -1,5 +1,7 @@
-<h1>Function call on button click</h1>
-<button (click)="handleClickEvent()">Click Me</button>   <!-- here click is calling the function i.e handleClickEvent-->
+<!-- here click is calling the function i.e handleClickEvent-->
+
+            <h1>Function call on button click</h1>
+            <button (click)="handleClickEvent()">Click Me</button>   
 
 <!-- add fuction with assign data type and button -->  
 
@@ -57,11 +59,16 @@
           <div style="background-color: aqua;">
             <h1>GET and Set Input field Value</h1>
             <h1>User Name is : {{displayInfo}}</h1>
-            <input type="text" (input)="getInfo($event)" placeholder="Enter User name">
+            <input type="text" value="{{info}}" (input)="getInfo($event)" placeholder="Enter User name">
             <br>
-            <button (click)="showInfo()">Get Value</button>
-
+            <button (click)="showInfo()">Get Name</button>
+            <button (click)="setInfo()">set Name</button>
             
+            <hr>
+            <h1>Email :{{email}}</h1>
+            <input type="text" value="{{email}}" placeholder="enter email" #emailField>
+            <button (click)="getEmail(emailField.value)">Get Email</button>
+            <button (click)="setEmail(emailField.value)">Set Email</button>
 
           </div>
 

@@ -57,12 +57,27 @@ export class AppComponent {
 
   info=""
   displayInfo=""
+  email="";
   getInfo(event:Event){
     this.info=(event.target as HTMLInputElement).value
   }
 
   showInfo(){
     this.displayInfo = this.info;
+  }
+
+  setInfo(){
+    this.info="sam"
+  }
+
+  getEmail(val:string){
+    console.log(val);
+    this.email=val;
+  }
+
+  setEmail(val:string){
+    console.log(val);
+    this.email="default@gmail.com"
   }
 
 
