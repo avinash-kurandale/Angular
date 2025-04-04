@@ -125,6 +125,32 @@
             
           </div> 
           
+<!-- switch case in angular -->
 
+          <div class="bgcolor">
+            <h1>Switch statement</h1> 
+
+            @switch(colour){
+              @case('red'){
+                <h1 style="background-color: red; color: aliceblue;">RED</h1>
+              }
+              @case('blue'){
+                <h1 style="background-color: blue; color: aliceblue;">BLUE</h1>
+              }
+              @case('green'){
+                <h1 style="background-color:green; color: aliceblue;">GREEN</h1>
+              }
+              @case('yellow'){
+                <h1 style="background-color: yellow; color: grey;">YELLOW</h1>
+              }@default{
+                <h1 style="color: white; background-color:black;">no color match</h1>
+              }
+            }
+            <button (click)="handlecolour('red')">Red</button>
+            <button (click)="handlecolour('blue')">blue</button>
+            <button (click)="handlecolour('green')">green</button>
+            <button (click)="handlecolour('yellow')">yellow</button>
+            <button (click)="handlecolour('white')">gold</button>
+          </div>
 
 

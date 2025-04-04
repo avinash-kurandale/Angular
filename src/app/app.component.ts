@@ -103,6 +103,15 @@ export class AppComponent {
         handleInput(event:Event){
           this.color = parseInt((event.target as HTMLInputElement).value);
         }
+
+// Switch case in angular        
+      
+        colour = 'blue'
+
+        handlecolour(val:string){
+          this.colour=val;
+        }
+
 }
 
   

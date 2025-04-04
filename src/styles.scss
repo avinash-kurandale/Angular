@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
+*{
+    // background-color: skyblue;
+    justify-items: center;
+    align-items: center;
+}
 button{
     height: 50px;
     width: 100px;
@@ -8,4 +12,8 @@ button{
     background-color: goldenrod;
     border: 2px solid red;
     margin: 5px;
+    
+}
+button:hover{
+    border:2px solid white ;
 }
