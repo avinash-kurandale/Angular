@@ -94,6 +94,15 @@ export class AppComponent {
     hideBox(){
       this.isBoxVisible=false;
     }
+
+// Else If in angular | contol flow statement
+        color=1;
+        handlecolor(val:number){
+          this.color=val;
+        }
+        handleInput(event:Event){
+          this.color = parseInt((event.target as HTMLInputElement).value);
+        }
 }
 
   

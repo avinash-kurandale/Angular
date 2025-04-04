@@ -86,7 +86,7 @@
   <app-home></app-home>
 
 
-  <!-- IF ELSE in Angular | hide show | toggle  -->
+<!-- IF ELSE in Angular | hide show | toggle  -->
 
          <div class="if-else">
               <button (click)="showBox()">Show-Box</button>
@@ -100,3 +100,31 @@
                 <P>box is hidden, click on show box to see box</P>
               }
          </div>
+
+<!-- Else If condition |control flow statement -->
+          
+          <div class="background"> 
+            <h1>Else If condition</h1> 
+            @if(color==1){
+              <div style="background-color: red; width: 100px; height: 100px;"></div>
+            }
+            @else if(color==2){
+              <div style="background-color: blue; width: 100px; height: 100px;"></div>
+            }
+            @else if(color==3){
+              <div style="background-color: green; width: 100px; height: 100px;"></div>
+            }
+            @else{
+              <div style="background-color: black; width: 100px; height: 100px;"></div>
+            }
+            <button (click)="handlecolor(1)">red</button>
+            <button (click)="handlecolor(2)">blue</button>
+            <button (click)="handlecolor(3)">green</button>
+            <button (click)="handlecolor(100)">other</button>
+            <input (input)=" handleInput($event)"type="text" placeholder="give color num">
+            
+          </div> 
+          
+
+
+
