@@ -9,14 +9,14 @@ import { HomeComponent } from './home/home.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  handleClickEvent(){                 //tjis is fuction that called in html file by click event of button
+  handleClickEvent(){                 //this is fuction that called in html file by click event of button
     alert("hi welcome to the website")
   }
-  //data type in angular/ts check syntax also carefully
+//data type in angular/ts check syntax also carefully
   name:string="Avinash"
-  //multiple data type together
+//multiple data type together
   data:string|number="hello"
-  //if want to assing multiple data type then i.e any
+//if want to assing multiple data type then i.e any
   other:any=true
 
 
@@ -26,12 +26,12 @@ export class AppComponent {
     this.other="anup"
   }
 
-  //assingment that create button to make addition using data type and fuction
+//assingment that create button to make addition using data type and fuction
   sum(a:number ,b:number){
     console.log(a+b);
   }
 
-  // making counter app in Angular , making button for increment decrement and reset 
+// making counter app in Angular , making button for increment decrement and reset 
 
   count=0
   
@@ -46,7 +46,7 @@ export class AppComponent {
 
   }
 
-   // create function for click input mouse focus and blue events
+// create function for click input mouse focus and blue events
 
    handleEvent(event:Event){
     console.log("function called",event.type);
@@ -80,6 +80,8 @@ export class AppComponent {
     this.email="default@gmail.com"
   }
 
+//  style option in angular 
+// imports: [RouterOutlet,HomeComponent], here homecomponent is imported in ts file of appcomponent
 
 }
 
