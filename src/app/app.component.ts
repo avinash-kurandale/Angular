@@ -112,6 +112,24 @@ export class AppComponent {
           this.colour=val;
         }
 
+// For Loop in template   
+
+         users =["Anil","Sam","Ram","Shyam","Sher"]
+         students=[
+          {name:'Anil', age:29, email:'anil@test.com'},
+          {name:'Sam', age:29, email:'sam@test.com'},
+          {name:'Ram', age:29, email:'anil@test.com'},
+          {name:'Shyam', age:29, email:'anil@test.com'},
+          {name:'Sher', age:29, email:'anil@test.com'},
+         ]
+         getName(name:string){
+          console.log(name);
+         }
+
+        
+
 }
+
+
 
   

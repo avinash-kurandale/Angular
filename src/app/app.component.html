@@ -154,3 +154,23 @@
           </div>
 
 
+<!-- For Loop in template  -->
+
+          <div class="backcolor">
+            <h1>For Loop in Template</h1>
+            @for(user of users; track user){
+              <h2>{{user}}</h2>
+            }
+            <hr>
+            @for(student of students; track student.name){
+              <h2>
+                <span>{{student.name}}</span>
+                <span>{{student.age}}</span>
+                <span>{{student.email}}</span>
+                <button (click)="getName(student.name)" >get name</button>
+              </h2>
+            }
+            
+          </div>
+
+
