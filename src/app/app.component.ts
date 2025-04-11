@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, computed, effect, signal, WritableSignal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
@@ -126,10 +126,74 @@ export class AppComponent {
           console.log(name);
          }
 
+// Signals  
+        // avi=signal(10);
+        // x=20;
+
+        // constructor(){     //make it comment out when have to see concept because using many constroctor in single class are not allows 
+        //   effect(()=>{
+        //     console.log(this.avi());
+        //   })
+        // }
+
+        // updateval(){
+        //   this.avi.set(this.avi()+1)
+        // } 
+
+        // //writablesignal
+
+        // van: WritableSignal<number | string > = signal(10);  //can be modified as below
+
+        // updatesignal(){
+        //   this.van.set("hello");
+        // }
+
+        // // computed signal
+        // p=signal(10);
+        // q=signal(20);
+        // z=computed(()=>this.p()+this.q())
+
+        // showVal(){
+        //   console.log(this.z());
+        //   this.p.set(100)
+        //   console.log(this.z());
+        // }
+
+// Effect in angular
+
+        // user= signal('anil')
+        
         
 
-}
+        // constructor() {
+        //   effect(() => {
+        //     console.log(this.user()); 
+        //   });
+        // }
 
+        // real time use
+        user= signal('anil')
+        ram = signal(0)
+        displayHeading=false
+
+        constructor(){
+          effect(()=>{
+            if(this.ram()==2){
+              this.displayHeading=true
+              setTimeout(()=>{
+                this.displayHeading=false
+              },2000)
+            }else{
+              this.displayHeading=false
+            }
+          })
+        }
+
+        toggleValue(){
+          this.ram.set(this.ram()+1)
+        }
+
+}
 
 
   
